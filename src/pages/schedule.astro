@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Scheduler } from "@/components/Scheduler";
+---
+
+<Layout title="Schedule a Meeting">
+  <main class="container mx-auto">
+    <Header
+      title="Schedule a Meeting"
+      description="Select your preferred date and time"
+    />
+    <Scheduler client:load />
+  </main>
+</Layout>

@@ -1,11 +1,23 @@
 ---
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import '@/styles/globals.css'
 ---
 
-<Layout>
-  <Welcome />
+<Layout title="Scheduling App">
+  <main class="container mx-auto py-6">
+    <Header 
+      title="Welcome to the Scheduling App" 
+      description="Schedule your meetings with ease"
+    />
+    <div class="px-6">
+      <a 
+        href="/schedule" 
+        class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+      >
+        Schedule a Meeting
+      </a>
+    </div>
+  </main>
 </Layout>
+
