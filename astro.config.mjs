@@ -9,19 +9,24 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   env: {
     schema: {
-      API_URL: envField.enum({
-        context: "client",
-        access: "public",
-        values: ["foo", "bar", "baz"],
-        optional: true,
-        default: "baz",
-      }),
-      PORT: envField.number({
+      // API_URL: envField.enum({
+      //   context: "client",
+      //   access: "public",
+      //   values: ["foo", "bar", "baz"],
+      //   optional: true,
+      //   default: "baz",
+      // }),
+      // PORT: envField.number({
+      //   context: "server",
+      //   access: "public",
+      //   default: 4321,
+      // }),
+      // API_SECRET: envField.string({ context: "server", access: "secret" }),
+      PUBLIC_APP_VERSION: envField.string({
         context: "server",
         access: "public",
-        default: 4321,
+        default: "0.0.0",
       }),
-      API_SECRET: envField.string({ context: "server", access: "secret" }),
     },
   },
 
